@@ -2,6 +2,7 @@ package com.example.newapp;
 
 import static com.example.newapp.R.*;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btn2;
     private Button btn3;
 
-    private EditText txt;
+    private EditText email;
+    private  EditText password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +32,18 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"on create", Toast.LENGTH_SHORT).show();
         btn1= findViewById(R.id.button);
         
-        txt = findViewById(R.id.editTextText);
+//        email = findViewById(R.id.editTextText);
+//        password = findViewById(R.id.editTextText2);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String str;
-                str=txt.getText().toString();
-                Toast.makeText(MainActivity.this, str, Toast.LENGTH_SHORT).show();
+//                String e;
+//                e=email.getText().toString();
+//                String p;
+//                p = password.getText().toString();
+//                Toast.makeText(MainActivity.this, e+" "+p, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
             }
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
