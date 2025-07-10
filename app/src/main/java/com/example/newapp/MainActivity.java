@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        Toast.makeText(this,"on create", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"on create", Toast.LENGTH_SHORT).show();
         btn1= findViewById(R.id.button);
         
 //        email = findViewById(R.id.editTextText);
@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 //                p = password.getText().toString();
 //                Toast.makeText(MainActivity.this, e+" "+p, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                intent.putExtra("username","shashi");
+                intent.putExtra("password","1234");
                 startActivity(intent);
             }
         });
